@@ -12,12 +12,14 @@ let renderCurrentTime = () => {
 }
 
 let renderUser = (event) => {
+   event.preventDefault();
    let input = document.querySelector('.inp_username').value;
    localStorage.setItem('username', input);   
    convertMainDiv(input);
 }
 
 let registSchedule = (event) => {	
+   event.preventDefault();
    let prevTodo = localStorage.getItem('todo');
    let input = document.querySelector('.inp_todo').value;
    let todoList = [];
